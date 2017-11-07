@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
+
 /* models/data */
 const tweetBank = require('../tweetBank');
+
 
 router.get('/', function(req, res) {
   let tweets = tweetBank.list();
@@ -32,7 +34,7 @@ router.get('/users/:name',function(req,res){
 router.get('/tweets/:id',function(req,res){
   var id = req.params.id;
   var tweets = tweetBank.find({id:id});
-  console.log(tweets);
+  //console.log("req id", typeof id)
   res.render('index',{tweets:tweets});
 });
 

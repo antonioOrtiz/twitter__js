@@ -6,7 +6,7 @@ var count = 1;
 
 //public
 function add(name, content) {
-  data.push({ name: name, content: content, id:count });
+  data.push({ name: name, content: content, id:count.toString()});
   count++;
 }
 
